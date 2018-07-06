@@ -16,8 +16,17 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 ## Compiling from the command line
 
-### Intro To Compilers
+### Intro To Compilers (EXTRA)
 
+A compiler is a "*special*" program which translates source code written in higher-level languages (such as C++)
+into lower-level language (such as, assembly, machine or object code) in order to create an **executable program**.
+The compilation process of a C++ program involves three main steps:
+
+1. Preprocessing
+2. Compilation
+3. Linking
+
+#### Preprocessing
 
 
 Compiling from the command line is a fairly straight-forward task. The most common C++ compiler (and the one I recommend
