@@ -1,2 +1,5 @@
 # CPP_VU
-A C++ Repo For VU Work
+## A Repository meant to hold a manual for C++
+
+Hello, This manual should help guide you through the Computer Programming Course
+**XB_40011**
