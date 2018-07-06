@@ -6,6 +6,8 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 [Link to another page](./another-page.html).
 
+The Sections of this page which end with (EXTRA) are **NOT** essential for passing the course, however they do give a greater insight on the C++ language, and might help you in future courses. Students who are not interested in going the "extra mile" can safely ignore these sections.
+
 There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
@@ -15,6 +17,9 @@ There should be whitespace between paragraphs. We recommend including a README, 
 >“A journey of a thousand miles begins with a single step.”
 
 ## Compiling from the command line
+
+Compiling from the command line is a fairly straight-forward task. The most common C++ compiler (and the one I recommend
+using) is the GNU *C++ Compiler* "**g++**".
 
 ### Intro To Compilers (EXTRA)
 
@@ -28,10 +33,14 @@ The compilation process of a C++ program involves three main steps:
 
 #### Preprocessing
 
-Preprocessor statements (*"Preprocessor Directives"*) in C++ (and C) source code, start with a **#** character (e.g., #include, #define, #ifdef, etc...). The preprocessor *"scans"* the source code before compiling it and looks for the **#** character, depending on the directive it acts accordingly. The most common preprocessor directive in C++ is the #include statement, as it is needed to include the "iostream" file (and any other lib files) which contains the Input/Output objects (std::cin/std::cout) and their respective overloaded operators ">>" and "<<". The "iostream" file resides in the file system, and the preprocessor will essentially copy that file and paste it where the #include directive was placed in the source code.
+Preprocessor statements (*"Preprocessor Directives"*) in C++ (and C) source code, start with a **#** character (e.g., #include, #define, #ifdef, etc...). The preprocessor *"scans"* the source code before compiling it and looks for the **#** character, depending on the directive it acts accordingly. The most common preprocessor directive in C++ is the #include statement, as it is needed to include the "iostream" file (and any other lib files) which contains the Input/Output objects (std::cin/std::cout) and their respective overloaded operators ">>" and "<<". The "iostream" file resides in the file system, and the preprocessor will essentially copy that file and paste it where the #include directive was placed in the source code. The preprocessor eventually produces a single (intermediary) output file inlcuding some useful "notes" which give more information to the compiler, in order for the latter to make more sense of the code and therefore produce better and more detailed error messages.
 
-Compiling from the command line is a fairly straight-forward task. The most common C++ compiler (and the one I recommend
-using) is the GNU *C++ Compiler* "**g++**".
+#### Compilation
+
+
+
+
+
 
 # Module 2
 
