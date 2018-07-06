@@ -10,7 +10,30 @@ There should be whitespace between paragraphs.
 
 There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# Header 1
+# Module 1
+
+>“A journey of a thousand miles begins with a single step.”
+
+## Compiling from the command line
+
+### Intro To Compilers
+
+
+
+Compiling from the command line is a fairly straight-forward task. The most common C++ compiler (and the one I recommend
+using) is the GNU *C++ Compiler* "**g++**".
+
+# Module 2
+
+# Module 3
+
+# Module 4
+
+# Module 5
+
+# Module 6
+
+# Module 7
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
