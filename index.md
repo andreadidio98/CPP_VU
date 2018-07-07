@@ -82,7 +82,7 @@ In C++, there are many built-in operators and are divided into 6 main categories
 
 1. Arithmetic Operators (+, -, \*, /, %, ++, --)
 2. Relational Operators (==, !=, <, >, <=, >=)
-3. Bitwise Operators (&, \|, ^, ~, <<, >>)
+3. Bitwise Operators (&, \|, ^, ~, \<\<, \>\>)
 4. Logical Operators (&&, \|\|, !)
 5. Assignment Operators (=, +=, -=, \*=, /=, %=, &=, \<\<=, \>\>=, \|=, ^=)
 6. Misc Operators (sizeof, ., ->, &, \*, Cast, *Ternary*)
@@ -131,7 +131,7 @@ The compilation process of a C++ program involves three main steps:
 
 Preprocessor statements (*"Preprocessor Directives"*) in C++ (and C) source code, start with a **#** character (e.g., #include, #define, #ifdef, etc...). The preprocessor *"scans"* the source code before compiling it and looks for the **#** character, depending on the directive it acts accordingly.
 
-The most common preprocessor directive in C++ is the #include statement, as it is needed to include the "iostream" file (and any other lib files) which contains the Input/Output objects (std::cin/std::cout) and their respective overloaded operators ">>" and "<<". The "iostream" file resides in the file system, and the preprocessor will essentially copy that file and paste it where the #include directive was placed in the source code.
+The most common preprocessor directive in C++ is the #include statement, as it is needed to include the "iostream" file (and any other lib files) which contains the Input/Output objects (std::cin/std::cout) and their respective overloaded operators "\>\>" and "\<\<". The "iostream" file resides in the file system, and the preprocessor will essentially copy that file and paste it where the #include directive was placed in the source code.
 
 The preprocessor eventually produces a single (intermediary) output file including some useful "notes" which give more information to the compiler, in order for the latter to make more sense of the code and therefore produce better and more detailed error messages.
 
