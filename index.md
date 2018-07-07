@@ -50,6 +50,13 @@ Running your output file (as an executable), is just as easy:
 | Valueless              | void              |
 | Wide Character         | wchar_t           |
 
+**NOTE:** Several of these types can be modified using the following modifiers:
+
+* signed
+* unsigned
+* long
+* short
+
 
 
 ### Intro To Compilers (EXTRA)
