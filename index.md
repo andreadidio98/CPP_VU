@@ -76,14 +76,25 @@ By default, primitive data types are **signed**
 
 In C++, there are many built-in operators and are divided into 6 main categories:
 
-1. Arithmetic Operators
+1. Arithmetic Operators (+, -, \*, /)
 2. Relational Operators
 3. Bitwise Operators
 4. Logical Operators
 5. Assignment Operators
 6. Misc Operators
 
+The most common operators are contained in the following table:
 
+| Operator        | Name            | Short Description|
+|:----------------|:----------------|:-----------------|
+| unsigned char   | 1 Byte          | 0 ~ 255          |
+| signed char     | 1 Byte          | -147 ~ 147       |
+| unsigned int    | 4 Bytes         | 0 ~ 4294967295   |
+| signed int      | 4 Bytes         | -2147483648 ~ 2147483647 |
+| short int       | 2 Bytes         | -32768 ~ 32767   |
+| long int        | 4 Bytes         | -2147483648 ~ 2147483647 |
+| float           | 4 Bytes         | +/- 3.4e +/- 38 (~7 digits) |
+| double          | 8 Bytes         | +/- 1.7e +/- 308 (~15 digits) |
 
 
 
