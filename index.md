@@ -84,7 +84,7 @@ In C++, there are many built-in operators and are divided into 6 main categories
 2. Relational Operators (==, !=, <, >, <=, >=)
 3. Bitwise Operators (&, \|, ^, ~, <<, >>)
 4. Logical Operators (&&, \|\|, !)
-5. Assignment Operators (=, +=, -=, \*=, /=, %=, &=, <<=, >>=, \|=, ^=)
+5. Assignment Operators (=, +=, -=, \*=, /=, %=, &=, \<\<=, \>\>=, \|=, ^=)
 6. Misc Operators (sizeof, ., ->, &, \*, Cast, *Ternary*)
 
 The Arithmetic operators, are fairly straight-forward and most, behave as expected. The only two operators that might need a brief explanation are the **Modulo** (**%**) operator, which is a binary operator (takes two "arguments") that returns the remainder of the division operation on two numbers. E.g., 20 % 3 evaluates to 2. The **increment/decrement** (**++/--**) are unary operators, and can be used as a *prefix* OR *suffix*. If these operators are placed *before* the variable, the variable is incremented/decremented and THEN use the incremented/decremented value. For example:
