@@ -31,7 +31,9 @@ Preprocessor statements (*"Preprocessor Directives"*) in C++ (and C) source code
 
 #### Compilation
 
+In the compilation stage, the files produced by the preprocessor are parsed and converted into *assembly code*. At this stage the **assembler** is called and the source code files get translated to *machine code* producing the actual binary file (**"object file"**). The object files contain the compiled code in binary form, and can be put in special archives called static libraries, for easier reusing later on. At **this** stage, the *"compile-time errors"* such as syntax errors are reported.
 
+#### Linking
 
 
 
