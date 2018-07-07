@@ -72,6 +72,18 @@ By default, primitive data types are **signed**
 | double          | 8 Bytes         | +/- 1.7e +/- 308 (~15 digits) |
 
 
+## Operators
+
+In C++, there are many built-in operators and are divided into 6 main categories:
+
+1. Arithmetic Operators
+2. Relational Operators
+3. Bitwise Operators
+4. Logical Operators
+5. Assignment Operators
+6. Misc Operators
+
+
 
 
 
