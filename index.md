@@ -71,6 +71,10 @@ By default, primitive data types are **signed**
 | float           | 4 Bytes         | +/- 3.4e +/- 38 (~7 digits) |
 | double          | 8 Bytes         | +/- 1.7e +/- 308 (~15 digits) |
 
+## Variables
+
+**NOTE:** C++ IS A STRONGLY-TYPED LANGUAGE!!! This means that assigning a value to a variable that does not correspond to the **type** of the variable will cause a **compile-time error**.
+
 
 ## Operators
 
@@ -95,6 +99,8 @@ a++; //a = 21
 --b; //b = 2
 
 ```
+
+
 
 The most common operators are contained in the following table:
 
