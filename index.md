@@ -73,6 +73,21 @@ By default, primitive data types are **signed**
 
 ## Variables
 
+We can't make anything of interest with a computer without storing data in memory. We store data in **objects**. To access an object, we give it a *name*. A named object is called a **variable** and has a specific **type**. The data we store in variables are called *values*. A statement that defines a variable is called a **variable definition** and according to latest C++ standards should be **initialised**. An example is:
+
+```c++
+
+int total_days = 365;
+char grade = 'A';
+std::string name = "John";
+bool is_raining = true;
+double pi = 3.1415926;
+float points = 3.5f;
+
+```
+
+Notice how a character is enclosed in *single quotes* whilst strings are enclosed in *double quotes*
+
 **NOTE:** C++ IS A STRONGLY-TYPED LANGUAGE!!! This means that assigning a value to a variable that does not correspond to the **type** of the variable will cause a **compile-time error**.
 
 
