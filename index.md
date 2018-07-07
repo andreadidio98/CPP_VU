@@ -34,6 +34,24 @@ Running your output file (as an executable), is just as easy:
 ./hello_world
 
 ```
+
+## Data Types
+
+
+#### Primitive Data Types
+
+| Type                   | Keyword           |
+|:-----------------------|:------------------|
+| Boolean                | bool              |
+| Character              | char              |
+| Integer                | int               |
+| Floating Point         | float             |
+| Double Floating Point  | double            |
+| Valueless              | void              |
+| Wide Character         | wchar_t           |
+
+
+
 ### Intro To Compilers (EXTRA)
 
 A compiler is a "*special*" program which translates source code written in higher-level languages (such as C++)
