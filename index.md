@@ -56,6 +56,22 @@ Running your output file (as an executable), is just as easy:
 * unsigned
 * long
 * short
+By default, primitive data types are **signed**
+
+#### Types & Their Sizes
+
+| Type            | Typical Size    | Value Range      |
+|:----------------|:----------------|:-----------------|
+| unsigned char   | 1 Byte          | 0 ~ 255          |
+| signed char     | 1 Byte          | -147 ~ 147       |
+| unsigned int    | 4 Bytes         | 0 ~ 4294967295   |
+| signed int      | 4 Bytes         | -2147483648 ~ 2147483647 |
+| short int       | 2 Bytes         | -32768 ~ 32767   |
+| long int        | 4 Bytes         | -2147483648 ~ 2147483647 |
+| float           | 4 Bytes         | +/- 3.4e +/- 38 (~7 digits) |
+| double          | 8 Bytes         | +/- 1.7e +/- 308 (~15 digits) |
+
+
 
 
 
