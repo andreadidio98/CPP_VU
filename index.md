@@ -14,7 +14,7 @@ The Sections of this page marked as *(EXTRA)* are **NOT** essential for passing 
 
 Compiling from the command line is a fairly straight-forward task. The most common C++ compiler (and the one I recommend
 using) is the GNU *C++ Compiler* "**g++**". The **DASH** system has a "UNIX-style command line", and compiling is done with the following command (*shell instruction*):
-```bash
+```shell
 
 g++ <c++_source_code_file> -o <target_output_file>
 
@@ -23,7 +23,17 @@ g++ <c++_source_code_file> -o <target_output_file>
 g++ hello_world.cpp -o hello_world
 
 ```
+Running your output file (as an executable), is just as easy:
 
+```shell
+
+./<target_output_file> <optional_parameters>
+
+#Example:
+
+./hello_world
+
+```
 ### Intro To Compilers (EXTRA)
 
 A compiler is a "*special*" program which translates source code written in higher-level languages (such as C++)
