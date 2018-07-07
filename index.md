@@ -27,13 +27,25 @@ The compilation process of a C++ program involves three main steps:
 
 #### Preprocessing
 
-Preprocessor statements (*"Preprocessor Directives"*) in C++ (and C) source code, start with a **#** character (e.g., #include, #define, #ifdef, etc...). The preprocessor *"scans"* the source code before compiling it and looks for the **#** character, depending on the directive it acts accordingly. The most common preprocessor directive in C++ is the #include statement, as it is needed to include the "iostream" file (and any other lib files) which contains the Input/Output objects (std::cin/std::cout) and their respective overloaded operators ">>" and "<<". The "iostream" file resides in the file system, and the preprocessor will essentially copy that file and paste it where the #include directive was placed in the source code. The preprocessor eventually produces a single (intermediary) output file inlcuding some useful "notes" which give more information to the compiler, in order for the latter to make more sense of the code and therefore produce better and more detailed error messages.
+Preprocessor statements (*"Preprocessor Directives"*) in C++ (and C) source code, start with a **#** character (e.g., #include, #define, #ifdef, etc...). The preprocessor *"scans"* the source code before compiling it and looks for the **#** character, depending on the directive it acts accordingly.
+
+The most common preprocessor directive in C++ is the #include statement, as it is needed to include the "iostream" file (and any other lib files) which contains the Input/Output objects (std::cin/std::cout) and their respective overloaded operators ">>" and "<<". The "iostream" file resides in the file system, and the preprocessor will essentially copy that file and paste it where the #include directive was placed in the source code. 
+
+The preprocessor eventually produces a single (intermediary) output file including some useful "notes" which give more information to the compiler, in order for the latter to make more sense of the code and therefore produce better and more detailed error messages.
 
 #### Compilation
 
-In the compilation stage, the files produced by the preprocessor are parsed and converted into *assembly code*. At this stage the **assembler** is called and the source code files get translated to *machine code* producing the actual binary file (**"object file"**). The object files contain the compiled code in binary form, and can be put in special archives called static libraries, for easier reusing later on. At **this** stage, the *"compile-time errors"* such as syntax errors are reported.
+In the compilation stage, the files produced by the preprocessor are parsed and converted into *assembly code*. At this stage the **assembler** is called and the source code files get translated to *machine code* producing the actual binary file (**"object file"**).
+
+The object files contain the compiled code in binary form, and can be put in special archives called static libraries, for easier reusing later on. At **this** stage, the *"compile-time errors"* such as syntax errors are reported.
 
 #### Linking
+
+The linker is the last entity involved in the compilation process and it is responsible for producing the final compilation output from all the object files created by the compiler.
+
+This output file can either be an *executable* or a *shared/dynamic library*. It links all the object files by replacing the references to undefined symbols with the correct addresses. Each of these symbols can be defined in other object files or in libraries.
+
+At this stage the most common errors are missing definitions or duplicate definitions. The former means that either the definitions don't exist (i.e. they are not written), or that the object files or libraries where they reside were not given to the linker. The latter is obvious: the same symbol was defined in two different object files or libraries.
 
 
 
