@@ -137,6 +137,9 @@ The Logical operators are used in order to evaluate expressions to obtain a sing
    bool make_false = !(true_and);
 ```
 
+The Assignment operators modify the current value of a variable by performing an operation on it. They are equivalent to assigning the result of an operation to the first operand.
+
+
 The most common operators are contained in the following table:
 
 | Operator        | Name            | Short Description|
