@@ -212,7 +212,7 @@ int main()
    return 0;
 }
 ```
-This very simple (and stupid) program, asks the user for a name, reads it from standard input, and outputs *"Hello <name>"*, however if the name the user has input is "error", the program catches the exception and uses cerr to print the error message (See Module 3).
+This very simple (and stupid) program, asks the user for a name, reads it from standard input, and outputs *"Hello \<name\>"*, however if the name the user has input is "error", the program catches the exception and uses cerr to print the error message (See Module 3).
 
 
 
