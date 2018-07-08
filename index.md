@@ -94,9 +94,9 @@ Notice how a character is enclosed in *single quotes* whilst strings are enclose
 There is also a special type of variable which is called a **constant**, as the name suggests, a constant is a variable that we need to use throughout the program but remains unchanged during execution. By convention, constant variables have their names in **capital letters**. For example:
 
 ```c++
-const int DAYS_OF_THE_YEAR = 365;
-//OR EQUIVALENTLY USING THE Preprocessor
-#define DAYS_OF_THE_YEAR 365 
+const int DAYS_OF_THE_YEAR = 365; //PREFERRED!!!
+//OR EQUIVALENTLY USING THE PREPROCESSOR
+#define DAYS_OF_THE_YEAR 365
 
 ```
 
