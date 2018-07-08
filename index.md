@@ -117,7 +117,25 @@ a++; //a = 21
 
 The relational operators are mainly used for conditions in control flow statements (See Module 2), *!=* translates to "not equal", where the **!** character is used as the *"Logical NOT"*, and the other operators should be straight-forward.
 
-**NOTE:** The *==* operator is used for *comparison* and **NOT** for assignment.
+**NOTE:** The *==* operator is used for the *comparison* of two variables (values) and **NOT** to assign a value to a variable.
+
+The Bitwise operators are used to perform operations on values at the **bit level** and are mentioned here for completeness but are out of the scope of this course.
+
+The Logical operators are used in order to evaluate expressions to obtain a single relational result. For example:
+
+```c++
+   int a = 2;
+   int b = 3;
+   int c = 42;
+
+   bool true_and = (a == 2) && (b == 3);
+   bool false_and = (a == 2) && (c == 3);
+
+   bool true_or = (a == 2) || (c == 3);
+   bool false_or = (a == 3) || (b == 2);
+
+   bool make_false = !(true_and);
+```
 
 The most common operators are contained in the following table:
 
