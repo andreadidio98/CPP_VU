@@ -165,6 +165,15 @@ There are **Safe** and **Unsafe** type conversions in C++, and unsurprisingly yo
 * int to bool
 * char to bool
 
+
+## Input/Output
+
+
+
+
+
+
+
 * * *
 
 ### Intro To Compilers (EXTRA)
