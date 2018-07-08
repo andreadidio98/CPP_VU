@@ -71,6 +71,8 @@ By default, primitive data types are **signed**
 | float           | 4 Bytes         | +/- 3.4e +/- 38 (~7 digits) |
 | double          | 8 Bytes         | +/- 1.7e +/- 308 (~15 digits) |
 
+**NOTE:** The size of *int* is machine-dependent and is *NOT* guaranteed to be 4 Bytes.
+
 ## Variables
 
 We can't make anything of interest with a computer without storing data in memory. We store data in **objects**. To access an object, we give it a *name*. A named object is called a **variable** and has a specific **type**. The data we store in variables are called *values*. A statement that defines a variable is called a **variable definition** and according to latest C++ standards should be **initialised**. An example is:
@@ -139,21 +141,30 @@ The Logical operators are used in order to evaluate expressions to obtain a sing
 
 The Assignment operators modify the current value of a variable by performing an operation on it. They are equivalent to assigning the result of an operation to the first operand.
 
+The Misc operators you will have to use mainly further along the course (Modules 6 and 7). The sizeof operator, takes an argument which is usually a type (int, char, double etc...), and returns the size in **bytes**, e.g., *sizeof(char)* returns *1*. The dot (.) and arrow (->) operators are used to access class members (Module 6), and the difference is that we use the arrow operator only when we access a class member through a pointer (Module 7). The reference operator (&) returns the address in memory of a variable. The pointer operator (\*) is used both to declare a pointer and to de-reference it, i.e., to grab the value stored at the memory address pointed to by the pointer (more on that in Module 7). The Cast operator is used to cast a variable from one type to another. Finally, the *Ternary* operator (? :) is used to return a value depending on a condition, e.g., *Condition ? X : Y* which means If Condition is true ? then it returns value X : otherwise value Y.
 
-The most common operators are contained in the following table:
+## Type Conversions
 
-| Operator        | Name            | Short Description|
-|:----------------|:----------------|:-----------------|
-| unsigned char   | 1 Byte          | 0 ~ 255          |
-| signed char     | 1 Byte          | -147 ~ 147       |
-| unsigned int    | 4 Bytes         | 0 ~ 4294967295   |
-| signed int      | 4 Bytes         | -2147483648 ~ 2147483647 |
-| short int       | 2 Bytes         | -32768 ~ 32767   |
-| long int        | 4 Bytes         | -2147483648 ~ 2147483647 |
-| float           | 4 Bytes         | +/- 3.4e +/- 38 (~7 digits) |
-| double          | 8 Bytes         | +/- 1.7e +/- 308 (~15 digits) |
+There are **Safe** and **Unsafe** type conversions in C++, and unsurprisingly you MUST AVOID unsafe type conversions to avoid your program to have undefined behaviour. As a general rule of thumb, safe conversions are those conversions where a smaller type is converted to a larger type, whilst unsafe conversions are those where a long type gets **narrowed** to a shorter type. These are unsafe for various reasons, the most obvious being that part of the *large* value might not fit into the shorter type.
+
+####Safe Conversions - Widening Conversions (Promotion):
+
+* char to int
+* int to double
+* bool to int
+* float to double
 
 
+#### Unsafe Conversions - Narrowing Conversions (Coercion):
+
+* double to int
+* double to char
+* double to bool
+* int to char
+* int to bool
+* char to bool
+
+* * *
 
 ### Intro To Compilers (EXTRA)
 
