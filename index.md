@@ -281,7 +281,7 @@ int value = 0;
 
 std::cout << "Enter a number: " << std::endl;
 
-std:: cin >> value;
+std::cin >> value;
 
 if(value < 0) {
   std::cout << "Your input is a negative number" << std::endl;
@@ -300,7 +300,33 @@ The code snippet above, asks the user to input a number and based on the number 
 
 ## Switch Statement
 
+Switch statements are essentially like a big collection if "if-else if" statements, however they do offer a neater and more concise way of presenting the statements. Switch statements let you check an expression against several *constexpr values* called **cases**. Inside a switch block, execution starts with the matching constant and runs until the end of the switch statement, or until the next **break;**. There is a **default case** to "catch" everything else. For example:
 
+
+```c++
+
+constexpr char grade = 'D';
+
+switch(grade) {
+   case 'A' :
+      std::cout << "Excellent!" << std::endl;
+      break;
+   case 'B' :
+   case 'C' :
+      std::cout << "Well done" << std::endl;
+      break;
+   case 'D' :
+      std::cout << "You passed" << std::endl;
+      break;
+   case 'E' :
+      std::cout << "Better try again" << std::endl;
+      break;
+   default :
+      std::cout << "Invalid grade" << std::endl;
+}
+std::cout << "Your grade is " << grade << std::endl;
+
+```
 
 
 
