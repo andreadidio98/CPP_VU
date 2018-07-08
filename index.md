@@ -56,6 +56,7 @@ Running your output file (as an executable), is just as easy:
 * unsigned
 * long
 * short
+
 By default, primitive data types are **signed**
 
 #### Types & Their Sizes
