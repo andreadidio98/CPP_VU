@@ -94,7 +94,8 @@ Notice how a character is enclosed in *single quotes* whilst strings are enclose
 There is also a special type of variable which is called a **constant**, as the name suggests, a constant is a variable that we need to use throughout the program but remains unchanged during execution. By convention, constant variables have their names in **capital letters**. For example:
 
 ```c++
-const int DAYS_OF_THE_YEAR = 365; //PREFERRED!!!
+const int DAYS_OF_THE_YEAR = 365;
+constexpr int DAYS_OF_THE_YEAR = 365;//PREFERRED because compile-time constant
 //OR EQUIVALENTLY USING THE PREPROCESSOR
 #define DAYS_OF_THE_YEAR 365
 
@@ -254,6 +255,51 @@ At this stage the most common errors are missing definitions or duplicate defini
 # Module 2
 
 > "Repetition is the mother of skill."
+
+## Expressions
+
+In C++ we can use all the arithmetic operators to make mathematical expressions. Operator precedence in C++ is very complex, however for the arithmetic operators, the classic "BIDMAS" order of operations applies. In order to override precedence, you can always use brackets. An example is:
+
+```c++
+constexpr int LENGTH = 5;
+constexpr int WIDTH = 3;
+
+const int area = LENGTH * WIDTH;
+const int perimeter = (LENGTH + WIDTH) * 2;
+
+```
+
+As mentioned previously in *Module 1*, we can use constants for values we will not change at run-time. **constexpr** is a constant whose value **MUST** be known at compile time. **const** is constant whose value that can be known at run time as well, i.e., only one assignment can happen either at compile time or at run time.
+
+## If Statements
+
+If statements are used for "selection". Any code within the **scope** of the if statement is only run if the condition of the if statement is met. For example:
+
+```c++
+
+int value = 0;
+
+std::cout << "Enter a number: " << std::endl;
+
+std:: cin >> value;
+
+if(value < 0) {
+  std::cout << "Your input is a negative number" << std::endl;
+}
+else if (value == 0) {
+  std::cout << "Your input is 0" << std::endl;
+}
+else {
+  std::cout << "Your input is a positive number" << std::endl;
+}
+
+```
+
+The code snippet above, asks the user to input a number and based on the number outputs a string to standard out stating what kind of value was given by the user. Note how the last statement (**else**) does not need another condition testing if *value \> 0* because that is our only remaining option. The above example shows all three combinations of if statements (if, else if and else), The if statement however, can be used on its own without else and else if.
+
+
+
+
 
 # Module 3
 
