@@ -89,7 +89,18 @@ float points = 3.5f; //the final 'f' is optional
 
 ```
 
-Notice how a character is enclosed in *single quotes* whilst strings are enclosed in *double quotes*
+Notice how a character is enclosed in *single quotes* whilst strings are enclosed in *double quotes*.
+
+There is also a special type of variable which is called a **constant**, as the name suggests, a constant is a variable that we need to use throughout the program but remains unchanged during execution. By convention, constant variables have their names in **capital letters**. For example:
+
+```c++
+const int DAYS_OF_THE_YEAR = 365;
+//OR EQUIVALENTLY USING THE Preprocessor
+#define DAYS_OF_THE_YEAR 365
+
+```
+
+The second method is a **macro**  and is sometimes discouraged in C++ especially for ease of debugging, as the #define instruction, makes the preprocessor (See EXTRA if interested) replace all the occurrences of "DAYS_OF_THE_YEAR" with "365" in the code at the *pre-compilation* stage. This means that if this causes an error, it may be confusing as the compiler trace will show the value and not the name of the macro.
 
 **NOTE:** C++ IS A STRONGLY-TYPED LANGUAGE!!! This means that assigning a value to a variable that does not correspond to the **type** of the variable will cause a **compile-time error**.
 
@@ -105,7 +116,7 @@ In C++, there are many built-in operators and are divided into 6 main categories
 5. Assignment Operators (=, +=, -=, \*=, /=, %=, &=, \<\<=, \>\>=, \|=, ^=)
 6. Misc Operators (sizeof, ., ->, &, \*, Cast, *Ternary*)
 
-The Arithmetic operators, are fairly straight-forward and most, behave as expected. The only two operators that might need a brief explanation are the **Modulo** (**%**) operator, which is a binary operator (takes two "arguments") that returns the remainder of the division operation on two numbers. E.g., 20 % 3 evaluates to 2. The **increment/decrement** (**++/-\-**) are unary operators, and can be used as a *prefix* OR *suffix*. If these operators are placed *before* the variable, the variable is incremented/decremented and THEN use the incremented/decremented value. For example:
+The Arithmetic operators, are fairly straight-forward and most, behave as expected. The only two operators that might need a brief explanation are the **Modulo** (**%**) operator, which is a binary operator (takes two "arguments") that returns the remainder of the division operation on two numbers. E.g., 20 % 3 evaluates to 2. The **increment/decrement** (**++/-\-**) are unary operators, and can be used as a *prefix* OR *suffix*. If these operators are placed *before* the variable, the variable is incremented/decremented and THEN used as the incremented/decremented value. For example:
 
 ```c++
 int a = 20;
@@ -168,8 +179,40 @@ There are **Safe** and **Unsafe** type conversions in C++, and unsurprisingly yo
 
 ## Input/Output
 
+In C++, I/O is based on **streams** of bytes flowing in and out of the program. The standard streams (and the ones you will use in the course) are **cin**, **cout** and **cerr**. The first is to handle keyboard input from the command line (STDIN), the second to handle output to the console (STDOUT) and the error stream (STDERR).
+
+The <iostream> header file contains the cin, cout and cerr objects ready to use. An example of their use is the following:
+
+```c++
+#include <iostream>
+#include <stdexcept>
 
 
+int main()
+{
+   std::string name = "";
+   const std::string ERROR = "error";
+
+   std::cout << Enter your name << std::endl;
+   std::cin >> name;
+
+   if(name == ERROR) {
+       throw std::runtime_error("ERROR--ABORTING");
+   }
+
+   try {
+
+   std::cout << "Hello " << name << std::endl;
+
+   }
+   catch(const std::runtime_error& e) {
+       std::cerr << e.what() << std::endl;
+   }
+
+   return 0;
+}
+```
+This very simple (and stupid) program, asks the user for a name, reads it from standard input, and outputs *"Hello <name>"*, however if the name the user has input is "error", the program catches the exception and uses cerr to print the error message (See Module 3).
 
 
 
