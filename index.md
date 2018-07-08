@@ -116,6 +116,7 @@ a++; //a = 21
 ```
 
 The relational operators are mainly used for conditions in control flow statements (See Module 2), *!=* translates to "not equal", where the **!** character is used as the *"Logical NOT"*, and the other operators should be straight-forward.
+
 **NOTE:** The *==* operator is used for *comparison* and **NOT** for assignment.
 
 The most common operators are contained in the following table:
