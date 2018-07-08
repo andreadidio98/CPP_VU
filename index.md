@@ -96,7 +96,7 @@ There is also a special type of variable which is called a **constant**, as the 
 ```c++
 const int DAYS_OF_THE_YEAR = 365;
 //OR EQUIVALENTLY USING THE Preprocessor
-#define DAYS_OF_THE_YEAR 365//C-Style constant
+#define DAYS_OF_THE_YEAR 365 //C-Style constant
 
 ```
 
@@ -213,9 +213,6 @@ int main()
 }
 ```
 This very simple (and stupid) program, asks the user for a name, reads it from standard input, and outputs *"Hello \<name\>"*, however if the name the user has input is "error", the program catches the exception and uses cerr to print the error message (See Module 3).
-
-
-
 
 * * *
 
