@@ -295,7 +295,11 @@ else {
 
 ```
 
-The code snippet above, asks the user to input a number and based on the number outputs a string to standard out stating what kind of value was given by the user. Note how the last statement (**else**) does not need another condition testing if *value \> 0* because that is our only remaining option. The above example shows all three combinations of if statements (if, else if and else), The if statement however, can be used on its own without else and else if.
+The code snippet above, asks the user to input a number and based on the number outputs a string to standard out stating what kind of value was given by the user. Note how the last statement (**else**) does not need another condition testing if *value \> 0* because that is our only remaining option. The above example shows all three combinations of if statements (**if**, **else if** and **else**), The if statement however, can be used on its own without else and else if. The curly braces (*{}*) define a **scope** in C++. For example, if the input is "-1", the only code that is executed is that within the scope of the if statement having the condition "*value \< 0*" will be executed, i.e., "Your input is a negative number" will be printed to the console.
+
+
+## Switch Statement
+
 
 
 
