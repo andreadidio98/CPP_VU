@@ -96,7 +96,7 @@ There is also a special type of variable which is called a **constant**, as the 
 ```c++
 const int DAYS_OF_THE_YEAR = 365;
 //OR EQUIVALENTLY USING THE Preprocessor
-#define DAYS_OF_THE_YEAR 365
+#define DAYS_OF_THE_YEAR 365//C-Style constant
 
 ```
 
