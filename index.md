@@ -82,7 +82,7 @@ char grade = 'A';
 std::string name = "John";
 bool is_raining = true;
 double pi = 3.1415926;
-float points = 3.5f;
+float points = 3.5f; //the final 'f' is optional
 
 ```
 
@@ -115,7 +115,8 @@ a++; //a = 21
 
 ```
 
-
+The relational operators are mainly used for conditions in control flow statements (See Module 2), *!=* translates to "not equal", where the **!** character is used as the *"Logical NOT"*, and the other operators should be straight-forward.
+**NOTE:** The *==* operator is used for *comparison* and **NOT** for assignment.
 
 The most common operators are contained in the following table:
 
