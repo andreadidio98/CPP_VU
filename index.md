@@ -147,7 +147,7 @@ The Misc operators you will have to use mainly further along the course (Modules
 
 There are **Safe** and **Unsafe** type conversions in C++, and unsurprisingly you MUST AVOID unsafe type conversions to avoid your program to have undefined behaviour. As a general rule of thumb, safe conversions are those conversions where a smaller type is converted to a larger type, whilst unsafe conversions are those where a long type gets **narrowed** to a shorter type. These are unsafe for various reasons, the most obvious being that part of the *large* value might not fit into the shorter type.
 
-####Safe Conversions - Widening Conversions (Promotion):
+#### Safe Conversions - Widening Conversions (Promotion):
 
 * char to int
 * int to double
