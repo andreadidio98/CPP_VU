@@ -312,6 +312,7 @@ switch(grade) {
       std::cout << "Excellent!" << std::endl;
       break;
    case 'B' :
+      std::cout << "Great!" << std::endl;
    case 'C' :
       std::cout << "Well done" << std::endl;
       break;
@@ -319,16 +320,60 @@ switch(grade) {
       std::cout << "You passed" << std::endl;
       break;
    case 'E' :
-      std::cout << "Better try again" << std::endl;
+      std::cout << "Fail" << std::endl;
       break;
    default :
       std::cout << "Invalid grade" << std::endl;
 }
-std::cout << "Your grade is " << grade << std::endl;
 
 ```
 
+## While Loops
 
+Sometimes it may be desirable to repeat some code block multiple times. A while loop statement repeatedly executes a target statement as long as a given condition is true. There are *two* "flavours" of while loops. The classic **while** loop, and the **do-while** loop. the difference lies in when the condition is tested. In a while loop, the condition is tested for **before** executing the code. In a do-while loop, the code block is executed **first** and THEN, the condition is tested for truth. The thing to remember is that in a *do-while* loop, the code block is executed **at least once** no matter if the condition is met or not. This does NOT happen in a normal while loop. For example:
+
+```c++
+int value_while = 0;//test with TRUE condition
+int value_do_while = 0;//test with TRUE condition
+
+int test_while = 0;//test with FALSE condition
+int test_do_while = 0;//test with FALSE condition
+
+
+while(value_while < 10) {
+    value_while++;
+}
+
+std::cout << "Value after while loop = " << value_while << std::endl; // = 10
+
+
+do {
+    value_do_while++;
+}
+
+while(value_do_while < 10);
+
+std::cout << "Value after do-while loop = " << value_do_while << std::endl; // = 10
+
+do {
+    test_do_while++;
+}
+
+while(test_do_while > 1);
+
+std::cout << "Value after do-while loop with FALSE condition = " << test_do_while << std::endl; // = 1
+
+
+
+while(test_while > 1) {
+    value_while++;
+}
+
+std::cout << "Value after while loop with FALSE condition = " << test_while << std::endl; // = 0
+
+```
+
+## For Loops
 
 
 # Module 3
