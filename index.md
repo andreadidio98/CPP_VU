@@ -558,7 +558,7 @@ int main()
 }
 
 ```
-So, to declare a template function we need to add (unsurprisingly), the keyword *template*, followed by angle brackets containing a *typename definition* which I called "T", but just like a variable can be named in any (sensible) way. The resto of the declaration is just as we would expect normally.
+So, to declare a template function we need to add (unsurprisingly), the keyword *template*, followed by angle brackets containing a *typename definition* which I called "T", but just like a variable can be named in any (sensible) way. The rest of the declaration is just as we would expect normally.
 
 When a template function is called, we have two possibilities, either calling it just as a normal function, log(grade), or, preferably by passing the type in the angle brackets, log <std::string> (name). The second is preferred, because it makes clear the fact that "log()" is a template function and can be used as such.
 
