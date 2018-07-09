@@ -569,6 +569,9 @@ From the point of view of the compiler, templates are not normal functions or cl
 
 >"Houston, we've had a problem here"
 
+## Compile Time Errors
+
+
 # Module 4
 
 # Module 5
