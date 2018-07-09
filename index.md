@@ -375,8 +375,47 @@ std::cout << "Value after while loop with FALSE condition = " << test_while << s
 
 ## For Loops
 
+For loops are very useful to iterate over a sequence of numbers. As you will see in *Module 4*, you will need for loops a lot in order to traverse **arrays** and **vectors** in an easy manner. For example:
+
+
+```c++
+
+std::vector<int> dynamic_array;
+
+for(int i = 0; i < 10; i++) {
+  dynamic_array.push_back(i);//See Module 4
+  std::cout << dynamic_array[i] << std::endl;
+}
+
+```
+
+As you can see, within the for statement, there are 4 components. The *init* component (int i = 0), the *condition* (i < 10) which will be tested for truth value like in a while loop, the *increment* (i++), which unsurprisingly increments the **loop variable** (**i** is chosen by convention) and the *code block* which gets executed if the condition is true. What the code block above does is, populating a std::vector of type int, with the loop invariant and printing to STDOUT the value at each index.
+
+**SIDE-NOTE:** Another important concept in C++ is **iterators** which are extremely useful (if not essential), when handling vectors (Module 4). Iterators can be used in for loops (and other control flow statements) in C++. The example above can be rewritten with iterators as follows:
+
+```c++
+
+std::vector<int> dynamic_array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+std::vector<int>::iterator it;
+
+for(it = dynamic_array.begin(); it < dynamic_array.end(); it++) {
+int& i = *it;
+std::cout << i << std::endl;
+}
+
+```
+
+**NOTE:** It is *extremely* bad practice to change the value of your *loop variable* within the loop's code block. This can make your life extremely hard when **debugging** the code as it "breaks" the control flow of your program. The same goes for the **goto statement**, which is not covered in this course and should **NOT** be used.
+
+
+
+
+### Ternary Operator (EXTRA)
 
 # Module 3
+
+>"Houston, we've had a problem here"
 
 # Module 4
 
