@@ -89,7 +89,15 @@ float points = 3.5f; //the final 'f' is optional
 
 ```
 
-Notice how a character is enclosed in *single quotes* whilst strings are enclosed in *double quotes*.
+Notice how a character is enclosed in *single quotes* whilst strings are enclosed in *double quotes*. **NB:** strings are a collection (array) of characters. **(EXTRA)** In fact, the classic way to declare a string in the C programming language, is:
+
+ ```c++
+
+const char* name = "John"; // = std::string name = "John";
+
+```
+
+which essentially is just a **pointer** (See Module 7) to the first character in memory of the string.
 
 There is also a special type of variable which is called a **constant**, as the name suggests, a constant is a variable that we need to use throughout the program but remains unchanged during execution. By convention, constant variables have their names in **capital letters**. For example:
 
@@ -214,6 +222,14 @@ int main()
 }
 ```
 This very simple (and stupid) program, asks the user for a name, reads it from standard input, and outputs *"Hello \<name\>"*, however if the name the user has input is "error", the program catches the exception and uses cerr to print the error message (See Module 3).
+
+**NOTE:** The "std::endl" you see at the end of every "std::cout" instruction is there in order to print a new line. This is equivalent to printing a *newline character* (**\n**) as follows:
+
+```c++
+
+std::cout << "Hello, World\n";
+
+```
 
 * * *
 
@@ -391,6 +407,20 @@ for(int i = 0; i < 10; i++) {
 
 As you can see, within the for statement, there are 4 components. The *init* component (int i = 0), the *condition* (i < 10) which will be tested for truth value like in a while loop, the *increment* (i++), which unsurprisingly increments the **loop variable** (**i** is chosen by convention) and the *code block* which gets executed if the condition is true. What the code block above does is, populating a std::vector of type int, with the loop invariant and printing to STDOUT the value at each index.
 
+A variant of the for loop in C++ is called a **Range-for loop** and can be very useful (and shorter to write) to traverse strings, arrays and vectors. The final outcome is the same as doing for loop in the *"traditional"* way! For example:
+
+```c++
+
+std::string name = "John";
+
+for(char c : name) {
+  std::cout << c << std::endl;
+}
+
+```
+
+**NOTE:** It is *extremely* bad practice to change the value of your *loop variable* within the loop's code block. This can make your life extremely hard when **debugging** the code as it "breaks" the control flow of your program. The same goes for the **goto statement**, which is not covered in this course and should **NOT** be used.
+
 **EXTRA:** Another important concept in C++ is **iterators** which are extremely useful (if not essential), when handling vectors (Module 4). Iterators can be used in for loops (and other control flow statements) in C++. The example above can be rewritten with iterators as follows:
 
 ```c++
@@ -400,17 +430,13 @@ std::vector<int> dynamic_array = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 std::vector<int>::iterator it;
 
 for(it = dynamic_array.begin(); it < dynamic_array.end(); it++) {
-int& i = *it;
+int& i = * it;
 std::cout << i << std::endl;
 }
 
 ```
 
 The code above as of now might still seem very confusing for most of you, and this is why you are not supposed to understand this at this stage, and nor are you required to do so throughout this course, but it is here to show you that C++ is a very complex language that covers many topics in programming, and many things can be done in many different ways. :)
-
-**NOTE:** It is *extremely* bad practice to change the value of your *loop variable* within the loop's code block. This can make your life extremely hard when **debugging** the code as it "breaks" the control flow of your program. The same goes for the **goto statement**, which is not covered in this course and should **NOT** be used.
-
-
 
 
 ### Ternary Operator (EXTRA)
