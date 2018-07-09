@@ -391,7 +391,7 @@ for(int i = 0; i < 10; i++) {
 
 As you can see, within the for statement, there are 4 components. The *init* component (int i = 0), the *condition* (i < 10) which will be tested for truth value like in a while loop, the *increment* (i++), which unsurprisingly increments the **loop variable** (**i** is chosen by convention) and the *code block* which gets executed if the condition is true. What the code block above does is, populating a std::vector of type int, with the loop invariant and printing to STDOUT the value at each index.
 
-**SIDE-NOTE:** Another important concept in C++ is **iterators** which are extremely useful (if not essential), when handling vectors (Module 4). Iterators can be used in for loops (and other control flow statements) in C++. The example above can be rewritten with iterators as follows:
+**EXTRA:** Another important concept in C++ is **iterators** which are extremely useful (if not essential), when handling vectors (Module 4). Iterators can be used in for loops (and other control flow statements) in C++. The example above can be rewritten with iterators as follows:
 
 ```c++
 
@@ -405,6 +405,8 @@ std::cout << i << std::endl;
 }
 
 ```
+
+The code above as of now might still seem very confusing for most of you, and this is why you are not supposed to understand this at this stage, and nor are you required to do so throughout this course, but it is here to show you that C++ is a very complex language that covers many topics in programming, and many things can be done in many different ways. :)
 
 **NOTE:** It is *extremely* bad practice to change the value of your *loop variable* within the loop's code block. This can make your life extremely hard when **debugging** the code as it "breaks" the control flow of your program. The same goes for the **goto statement**, which is not covered in this course and should **NOT** be used.
 
