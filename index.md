@@ -164,6 +164,14 @@ The Assignment operators modify the current value of a variable by performing an
 
 The Misc operators you will have to use mainly further along the course (Modules 6 and 7). The sizeof operator, takes an argument which is usually a type (int, char, double etc...), and returns the size in **bytes**, e.g., *sizeof(char)* returns *1*. The dot (.) and arrow (->) operators are used to access class members (Module 6), and the difference is that we use the arrow operator only when we access a class member through a pointer (Module 7). The reference operator (&) returns the address in memory of a variable. The pointer operator (\*) is used both to declare a pointer and to de-reference it, i.e., to grab the value stored at the memory address pointed to by the pointer (more on that in Module 7). The Cast operator is used to cast a variable from one type to another. Finally, the *Ternary* operator (? :) is used to return a value depending on a condition, e.g., *Condition ? X : Y* which means If Condition is true ? then it returns value X : otherwise value Y.
 
+The comma operator is also very useful, and you'll find yourself using it over and over in order to shorter your code. When declaring variables of the *same* type, it is possible to "chain" the declarations using the comma operator as follows:
+
+```c++
+
+int first = 0, second = 0, third = 0;
+
+```
+
 ## Type Conversions
 
 There are **Safe** and **Unsafe** type conversions in C++, and unsurprisingly you MUST AVOID unsafe type conversions to avoid your program to have undefined behaviour. As a general rule of thumb, safe conversions are those conversions where a smaller type is converted to a larger type, whilst unsafe conversions are those where a long type gets **narrowed** to a shorter type. These are unsafe for various reasons, the most obvious being that part of the *large* value might not fit into the shorter type.
@@ -439,7 +447,121 @@ std::cout << i << std::endl;
 The code above as of now might still seem very confusing for most of you, and this is why you are not supposed to understand this at this stage, and nor are you required to do so throughout this course, but it is here to show you that C++ is a very complex language that covers many topics in programming, and many things can be done in many different ways. :)
 
 
+## Functions
+
+When programming, it is **essential** for clarity to split logically blocks of code into different functions (and possibly different files). Functions are also useful to avoid the common paradigm of **spaghetti code**, which is code that is very hard to maintain, i.e., spaghetti code will eventually "break" when modifying certain parts of the code.
+
+Functions can have **arguments/parameters** or not, however, as you will notice whilst working on your code, functions without any parameters will not be very useful. Imagine a mathematical function f(x) = y that takes as input x and generates y as an output. A function **declaration** is something like:
+
+```c++
+
+int square(int);
+
+void log(std::string);
+
+```
+
+and is usually contained within a **header file** (which you are not required to use at this stage).
+
+A function **definition** is something like:
+
+```c++
+
+int square(int a) {
+  return (a * a);
+}
+
+void log(std::string name) {
+  std::cout << name << std::endl;
+}
+
+```
+
+As you can see, like variables, functions can have a type such as int or "*not*" having "type" void. Notice that I put "not" in quotes, because *void* is a valueless type and hence does **NOT** need a return value at the end of the function, even though it *technically* is a type as well.
+
+**NOTE:** the **main** function is always of type *int*, and the return value is returned to the **Operating System** when the execution has ended. If everything goes well, **0** will be returned.
+
+
 ### Ternary Operator (EXTRA)
+
+The Ternary operator is a very neat way to "compress" an if-else statement into a single line. Ternary operators can be nested just like if-else statements, however, if not used sparingly, they can be counterproductive and cause the code to be unclear at times. The ternary operator (? :) is used to return a value depending on a condition, e.g., *Condition ? X : Y* which means If Condition is true ? then it returns value X : otherwise value Y. An example of how to use ternary operators is as follows:
+
+```c++
+
+#include <iostream>
+
+
+int min(int a, int b) {
+    return ((a < b) ? a : b);
+}
+
+int main()
+{
+   int first_value = 0, second_value = 0;
+
+   std::cin >> first_value >> second_value;
+
+   int minimum_value = min(first_value, second_value);
+
+   std::cout << minimum_value << std::endl;
+
+   return 0;
+}
+
+```
+
+As you can see, the "min" function is defined in just three lines, only one being the code block. If we hadn't used the ternary operator, that function would have been written as:
+
+
+```c++
+
+int min(int a, int b) {
+  if(a < b) {
+    return a;
+  }
+  else {
+    return b;
+  }
+}
+
+```
+
+This is considerable longer. So, use ternary operators but do so **sparingly** to avoid overly messy code.
+
+### Function Templates (EXTRA)
+
+Function templates can be a very useful feature in C++ when declaring functions that need to adapt to accept parameters of different types. Imagine writing a log function which takes as a parameter a variable, and logs it to the console for debugging or whatever other reason. It is fairly simple to use template functions, and they can save you a lot of typing on top of making your code much neater. An example of a log() template function is:
+
+
+```c++
+
+#include <iostream>
+
+
+template <typename T> void log(T value) {
+    std::cout << "The value is: " << value << std::endl;
+}
+
+int main()
+{
+
+    int a = 42;
+    std::string name = "John";
+    char grade = 'A';
+
+    log <int> (a); //preferred way of calling template function.
+    log <std::string> (name);
+    log(grade);
+
+
+   return 0;
+}
+
+```
+So, to declare a template function we need to add (unsurprisingly), the keyword *template*, followed by angle brackets containing a *typename definition* which I called "T", but just like a variable can be named in any (sensible) way. The resto of the declaration is just as we would expect normally.
+
+When a template function is called, we have two possibilities, either calling it just as a normal function, log(grade), or, preferably by passing the type in the angle brackets, log <std::string> (name). The second is preferred, because it makes clear the fact that "log()" is a template function and can be used as such.
+
 
 # Module 3
 
