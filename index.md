@@ -28,9 +28,9 @@ The Sections of this page marked as *(EXTRA)* are **NOT** essential for passing 
 
 >“A journey of a thousand miles begins with a single step.”
 
-<details>
-<summary>Expand Module 1</summary>
+<details><summary>Expand Module 1++</summary>
 
+<p>
 
 
 ## Compiling from the command line
@@ -299,6 +299,8 @@ At this stage the most common errors are missing definitions or duplicate defini
 * * *
 
 
+
+</p>
 
 </details>
 
