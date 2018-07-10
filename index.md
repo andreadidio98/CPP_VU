@@ -28,9 +28,6 @@ The Sections of this page marked as *(EXTRA)* are **NOT** essential for passing 
 
 >“A journey of a thousand miles begins with a single step.”
 
-<details><summary>CLICK ME</summary>
-<p>
-
 ## Compiling from the command line
 
 Compiling from the command line is a fairly straight-forward task. The most common C++ compiler (and the one I recommend
@@ -295,9 +292,6 @@ This output file can either be an *executable* or a *shared/dynamic library*. It
 At this stage the most common errors are missing definitions or duplicate definitions. The former means that either the definitions don't exist (i.e. they are not written), or that the object files or libraries where they reside were not given to the linker. The latter is obvious: the same symbol was defined in two different object files or libraries.
 
 * * *
-
-</p>
-</details>
 
 
 # <a name="module2"></a>Module 2
