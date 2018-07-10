@@ -28,9 +28,9 @@ The Sections of this page marked as *(EXTRA)* are **NOT** essential for passing 
 
 >“A journey of a thousand miles begins with a single step.”
 
-<details><summary>Expand Module 1++</summary>
+<details><summary>Expand Module 1</summary>
 
-<p>
+<div>
 
 
 ## Compiling from the command line
@@ -300,7 +300,7 @@ At this stage the most common errors are missing definitions or duplicate defini
 
 
 
-</p>
+</div>
 
 </details>
 
@@ -613,18 +613,6 @@ From the point of view of the compiler, templates are not normal functions or cl
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
-
-
-##### Header 5
-
-<details>
-<summary>Expand 5</summary>
-
-1.  This is an ordered list following a header.<br>
-2.  This is an ordered list following a header.<br>
-3.  This is an ordered list following a header.<br>
-
-</details>
 
 
 
