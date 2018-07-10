@@ -4,7 +4,7 @@ layout: default
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png" alt="cpp_logo" width="120" height="100">
+<img src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png" alt="cpp_logo" width="120" height="130">
 </p>
 
 
