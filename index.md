@@ -564,12 +564,14 @@ When a template function is called, we have two possibilities, either calling it
 
 From the point of view of the compiler, templates are not normal functions or classes. They are compiled on demand, meaning that the code of a template function is not compiled until an instantiation with specific template arguments is required. At that moment, when an instantiation is required, the compiler generates a function specifically for those arguments from the template.
 
+* * *
 
 # Module 3
 
 >"Houston, we've had a problem here"
 
 ## Compile Time Errors
+
 
 
 # Module 4
