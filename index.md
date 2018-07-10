@@ -7,7 +7,7 @@ layout: default
 The Sections of this page marked as *(EXTRA)* are **NOT** essential for passing the course, however they do give a greater insight on the C++ language, and might help you in future courses. Students who are not interested in going the "extra mile" can safely ignore these sections.
 
 [Module 1](#Module-1)
-[Module 2](#-Module-2)
+[Module 2](#module2)
 
 (#Module-1)
 
@@ -279,7 +279,7 @@ At this stage the most common errors are missing definitions or duplicate defini
 * * *
 
 
-# Module 2
+# <a name=module2></a>Module 2
 
 > "Repetition is the mother of skill."
 
