@@ -603,6 +603,13 @@ From the point of view of the compiler, templates are not normal functions or cl
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
 
+
+
+
+#### <button class="collapsible"> Header 4 </button>
+
+<div class="content">
+
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -620,11 +627,6 @@ for (i = 0; i < coll.length; i++) {
 }
 
 </script>
-
-
-#### <button class="collapsible"> Header 4 </button>
-
-<div class="content">
 
 <p>
 
