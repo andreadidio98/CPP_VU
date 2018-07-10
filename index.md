@@ -609,9 +609,9 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 <details>
 <summary>Expand 5</summary>
 
-1.  This is an ordered list following a header.</br>
-2.  This is an ordered list following a header.</br>
-3.  This is an ordered list following a header.</br>
+1.  This is an ordered list following a header.<br>
+2.  This is an ordered list following a header.<br>
+3.  This is an ordered list following a header.<br>
 
 </details>
 
