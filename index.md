@@ -604,42 +604,6 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 
 
 
-
-
-#### <button class="collapsible"> Header 4 </button>
-
-<div class="content">
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-
-</script>
-
-<p>
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-</p>
-
-</div>
-
-
-
 ##### Header 5
 
 1.  This is an ordered list following a header.
