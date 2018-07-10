@@ -279,7 +279,7 @@ At this stage the most common errors are missing definitions or duplicate defini
 * * *
 
 
-# <a name=module2></a>Module 2
+# <a name="module2"></a>Module 2
 
 > "Repetition is the mother of skill."
 
