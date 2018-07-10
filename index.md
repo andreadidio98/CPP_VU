@@ -6,13 +6,13 @@ layout: default
 
 The Sections of this page marked as *(EXTRA)* are **NOT** essential for passing the course, however they do give a greater insight on the C++ language, and might help you in future courses. Students who are not interested in going the "extra mile" can safely ignore these sections.
 
-[Module 1](#Module-1)
+[Module 1](#module1)
 
 [Module 2](#module2)
 
-[Module 3](#markdown-header-module-3)
+[Module 3](#module3)
 
-(#Module-1)
+# <a name="module1"></a>Module 1
 
 >“A journey of a thousand miles begins with a single step.”
 
@@ -572,7 +572,7 @@ From the point of view of the compiler, templates are not normal functions or cl
 
 * * *
 
-# Module 3
+# <a name="module3"></a>Module 3
 
 >"Houston, we've had a problem here"
 
