@@ -2,8 +2,9 @@
 layout: default
 ---
 
-
 The Sections of this page marked as *(EXTRA)* are **NOT** essential for passing the course, however they do give a greater insight on the C++ language, and might help you in future courses. Students who are not interested in going the "extra mile" can safely ignore these sections.
+
+* * *
 
 # Contents
 
@@ -602,11 +603,40 @@ From the point of view of the compiler, templates are not normal functions or cl
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
 
-#### Header 4
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+</script>
+
+
+#### <button class="collapsible"> Header 4 </button>
+
+<div class="content">
+
+<p>
 
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
+
+</p>
+
+</div>
+
+
 
 ##### Header 5
 
