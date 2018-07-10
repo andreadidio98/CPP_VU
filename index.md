@@ -596,6 +596,12 @@ From the point of view of the compiler, templates are not normal functions or cl
 
 ## Compile Time Errors
 
+**Compile time errors** are mainly caused by syntax and type errors and are those that get reported to the user because the compiler was unable to interpret/understand the code. The most common compile-time errors are *missing semicolons* at the end of each statement, *missing closing curly brace (})* at the end of functions or control flow statements and using in code *undeclared variables*.
+
+## Run Time Errors
+
+
+
 
 
 # <a name="module4"></a>Module 4
