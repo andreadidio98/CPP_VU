@@ -6,11 +6,23 @@ layout: default
 
 The Sections of this page marked as *(EXTRA)* are **NOT** essential for passing the course, however they do give a greater insight on the C++ language, and might help you in future courses. Students who are not interested in going the "extra mile" can safely ignore these sections.
 
+# Contents
+
 [Module 1](#module1)
 
 [Module 2](#module2)
 
 [Module 3](#module3)
+
+[Module 4](#module4)
+
+[Module 5](#module5)
+
+[Module 6](#module6)
+
+[Module 7](#module7)
+
+* * *
 
 # <a name="module1"></a>Module 1
 
@@ -580,13 +592,13 @@ From the point of view of the compiler, templates are not normal functions or cl
 
 
 
-# Module 4
+# <a name="module4"></a>Module 4
 
-# Module 5
+# <a name="module5"></a>Module 5
 
-# Module 6
+# <a name="module6"></a>Module 6
 
-# Module 7
+# <a name="module7"></a>Module 7
 
 This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
