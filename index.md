@@ -3,7 +3,7 @@ layout: default
 ---
 
 
-![CPP](https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png =100x20)
+<img src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png" alt="cpp_logo" width="100" height="20">
 
 
 The Sections of this page marked as *(EXTRA)* are **NOT** essential for passing the course, however they do give a greater insight on the C++ language, and might help you in future courses. Students who are not interested in going the "extra mile" can safely ignore these sections.
