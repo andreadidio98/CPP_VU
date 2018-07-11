@@ -600,6 +600,8 @@ From the point of view of the compiler, templates are not normal functions or cl
 
 ## Run Time Errors
 
+**Run time errors**
+
 
 
 
