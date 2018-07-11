@@ -600,7 +600,7 @@ From the point of view of the compiler, templates are not normal functions or cl
 
 ## Run Time Errors
 
-**Run time errors**
+**Run time errors** are those which are not caused by syntax or type errors, but get "discovered" when the code is actually running.
 
 
 
