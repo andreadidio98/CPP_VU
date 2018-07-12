@@ -453,7 +453,7 @@ for(char c : name) {
 
 **NOTE:** It is *extremely* bad practice to change the value of your *loop variable* within the loop's code block. This can make your life extremely hard when **debugging** the code as it "breaks" the control flow of your program. The same goes for the **goto statement**, which is not covered in this course and should **NOT** be used.
 
-**EXTRA:** Another important concept in C++ is **iterators** which are extremely useful (if not essential), when handling vectors (Module 4). Iterators can be used in for loops (and other control flow statements) in C++. An example of the use of iterators is to print elements of a vector for example: 
+**EXTRA:** Another important concept in C++ is **iterators** which are extremely useful (if not essential), when handling vectors (Module 4). Iterators can be used in for loops (and other control flow statements) in C++. An example of the use of iterators is to print elements of a vector. For example:
 
 ```c++
 
@@ -596,14 +596,30 @@ From the point of view of the compiler, templates are not normal functions or cl
 
 ## Compile Time Errors
 
-**Compile time errors** are mainly caused by syntax and type errors and are those that get reported to the user because the compiler was unable to interpret/understand the code. The most common compile-time errors are *missing semicolons* at the end of each statement, *missing closing curly brace (})* at the end of functions or control flow statements and using in code *undeclared variables*.
+**Compile time errors** are mainly caused by syntax and type errors and are those that get reported to the user because the compiler was unable to interpret/understand the code. The most common compile-time errors are *missing semicolons* at the end of each statement, *missing closing bracket (}, ), ])* at the end of functions or control flow statements and using in code *undeclared variables*.
 
 ## Run Time Errors
 
-**Run time errors** are those which are not caused by syntax or type errors, but get "discovered" when the code is actually running.
+**Run time errors** are those which are not caused by syntax or type errors, but get "discovered" when the code is actually running. Imagine a program as the one below:
+
+```c++
+
+int num = 5, divisor = 0;
+
+std::cout << num/divisor << std::endl;
+
+```
+
+It should now be clear by now, that the syntax of the program above is fine at this point. This means, that the program *WILL* compile without any errors, producing an "executable" file. Nevertheless, **"Division by zero"** leads to a mathematical impossibility, which is only discovered when the program is running. What happens is actually very interesting: This is an error at the *hardware level*, which is returned back to the *operating system* as a *signal*. The operating system then interrupts the program's control flow and calls a *signal handler*, which will most likely kill the *process* (i.e., the program which is running).
+
+Usually, run time errors are the hardest errors to debug, because in most cases, the program will simply crash without notifying you what went wrong. There are two main ways (places) to handle run time errors:
+
+1. The caller of a function.
+2. The callee (i.e., the function itself).
 
 
 
+###GDB (EXTRA)
 
 
 # <a name="module4"></a>Module 4
