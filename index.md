@@ -453,7 +453,7 @@ for(char c : name) {
 
 **NOTE:** It is *extremely* bad practice to change the value of your *loop variable* within the loop's code block. This can make your life extremely hard when **debugging** the code as it "breaks" the control flow of your program. The same goes for the **goto statement**, which is not covered in this course and should **NOT** be used.
 
-**EXTRA:** Another important concept in C++ is **iterators** which are extremely useful (if not essential), when handling vectors (Module 4). Iterators can be used in for loops (and other control flow statements) in C++. The example above can be rewritten with iterators as follows:
+**EXTRA:** Another important concept in C++ is **iterators** which are extremely useful (if not essential), when handling vectors (Module 4). Iterators can be used in for loops (and other control flow statements) in C++. An example of the use of iterators is to print elements of a vector for example: 
 
 ```c++
 
