@@ -625,7 +625,10 @@ Handling errors on the callee's side is less messy, however, it is not always po
 
 ## Linker Errors
 
-As I have explained in my [Intro To Compilers Extra](#compilerextra), the linking procedure happens after the compilation of the source code, and what happens is, all the object files produced by the compilation step, are "merged" into one big executable file. 
+As I have explained in my [Intro To Compilers Extra](#compilerextra), the linking procedure happens after the compilation of the source code, and what happens is, all the object files produced by the compilation step, are "merged" into one big executable file. These errors are usually caused by functions that are called but haven't been defined, including incorrect header files, or for example, spelling **main** incorrectly for the main function.
+
+## Logic Errors
+
 
 
 ### GDB (EXTRA)
