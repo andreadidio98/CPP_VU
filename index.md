@@ -629,6 +629,20 @@ As I have explained in my [Intro To Compilers Extra](#compilerextra), the linkin
 
 ## Logic Errors
 
+Logic errors are those errors which allow the compiler to produce an apparently correct executable file, however the output is unexpectedly wrong. The example below is one of the most common examples of what a logic error is.
+
+```c++
+
+std::vector <int> dynamic_array;
+
+for(int i = 0; i < dynamic_array.size(); i++) {
+  dynamic_array.push_back(i);
+  std::cout << dynamic_array[i] << std::endl;
+}
+
+```
+
+The example above will not produce the expected output. The loop will not run because the *dynamic_array.size()* function call will return 0, and the vector will therefore not be filled with values. The code will compile, because there are no errors related to the c++ language.
 
 
 ### GDB (EXTRA)
