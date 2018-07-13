@@ -265,7 +265,7 @@ std::cout << "Hello, World\n";
 
 * * *
 
-### Intro To Compilers (EXTRA)
+### <a name="compilerextra"></a>Intro To Compilers (EXTRA)
 
 A compiler is a "*special*" program which translates source code written in higher-level languages (such as C++)
 into lower-level language (such as, assembly, machine or object code) in order to create an **executable program**.
@@ -617,6 +617,15 @@ Usually, run time errors are the hardest errors to debug, because in most cases,
 1. The caller of a function.
 2. The callee (i.e., the function itself).
 
+In the first situation, the code becomes hard to maintain because everytime a function is called, we would have to add try-catch blocks, check for return values and use many if statements to act accordingly to the return values. This can be useful however catching exceptions in code is very expensive and hinders performance. As a side note, if you will program in C, you will see that most functions will be of type *int*, because all the return values of system calls have to be checked (think about the main function in C++), and as you should know by now, void functions do not "allow" to return a value.
+
+Handling errors on the callee's side is less messy, however, it is not always possible to do so. Imagine a function taken from the iostream library, you *cannot* (unless wrapping the function in a function you program yourself) change it. In addition, it is not easy to keep track of where the error is causing a break in the control flow of your program, because you don't know which function call is actually calling the error.
+
+**NOTE:** Try to always check the arguments you are passing to a function, and (especially if you will be working with databases), *NEVER* trust user input.
+
+## Linker Errors
+
+As I have explained in my [Intro To Compilers Extra](#compilerextra), the linking procedure happens after the compilation of the source code, and what happens is, all the object files produced by the compilation step, are "merged" into one big executable file. 
 
 
 ### GDB (EXTRA)
