@@ -642,7 +642,11 @@ for(int i = 0; i < dynamic_array.size(); i++) {
 
 ```
 
-The example above will not produce the expected output. The loop will not run because the *dynamic_array.size()* function call will return 0, and the vector will therefore not be filled with values. The code will compile, because there are no errors related to the c++ language.
+The example above will not produce the expected output. The loop will not iterate through the code block because the *dynamic_array.size()* function call will return 0, and the vector will therefore not be filled with values. The code will compile, because there are no errors related to the C++ language. However it is logically invalid and will hence produce unexpected (or no) output.
+
+## Exceptions
+
+
 
 
 ### GDB (EXTRA)
