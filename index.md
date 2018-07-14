@@ -743,6 +743,7 @@ main: main.cpp:5: double divideIt(int, int): Assertion 'b != 0' failed.
 
 ```
 
+This is also a neater way of testing with if statements and outputting through cout. 
 
 
 
