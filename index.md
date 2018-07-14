@@ -248,6 +248,7 @@ int main()
    }
    catch(const std::runtime_error& e) {
        std::cerr << e.what() << std::endl;
+       return 1;
    }
 
    return 0;
@@ -682,6 +683,7 @@ int main() {
   }
   catch(const std::runtime_error& e) {
     std::cerr << e.what() << std::endl;
+    return 1;
   }
 
   return 0;
@@ -690,6 +692,18 @@ int main() {
 ```
 
 As you can see, I used the catch block that takes as a parameter only a std::runtime_error, therefore, if we had another type of exception, that catch block would have *NOT* handled the other exception. One way to let one catch block handle any exception is to give the catch block en ellipsis as a parameter like so **catch(...){}**. However, this is not very good practice as it is better to handle different exceptions in different catch blocks.
+
+## Debugging
+
+A very common and useful way of debugging your code is to think about what output you are expecting from your program, and add "debug output" to the console through the cout stream, when you perform some operations. I.e., you have to split your code in smaller pieces when debugging in order to find the bug more easily. Some good practices for debugging are:
+
+1. Comment the code in order to avoid forgetting why some blocks of code are there.
+2. *Catch* exceptions in the *main* function
+3. Add debug output using the cout stream.
+4. Keep the code clean by using meaningful variable/function names.
+
+
+### Assertions (EXTRA)
 
 
 
