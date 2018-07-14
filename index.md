@@ -654,7 +654,7 @@ In C++ exception handling is based on three keywords:
 
 In the <stdexcept> header file, the following exceptions are defined:
 
-![<stdexcept> std exceptions](https://www.tutorialspoint.com/cplusplus/images/cpp_exceptions.jpg)
+![\<stdexcept\> std exceptions](https://www.tutorialspoint.com/cplusplus/images/cpp_exceptions.jpg)
 
 
 
