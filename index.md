@@ -735,7 +735,7 @@ Assertion failed: expression, filename, line number
 
 ```
 
-So, in th example above, a possible output could be:
+So, in the example above, a possible output could be:
 
 ```shell
 
