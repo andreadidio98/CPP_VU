@@ -656,6 +656,41 @@ In the <stdexcept> header file, the following exceptions are defined:
 
 ![\<stdexcept\> std exceptions](https://www.tutorialspoint.com/cplusplus/images/cpp_exceptions.jpg)
 
+An example of the use of the three keywords is below:
+
+```c++
+
+#include <iostream>
+#include <stdexcept>
+
+double divideIt(int a, int b) {
+  if(b == 0) {
+    throw std::runtime_error("ERROR: Division by 0!!!");
+  }
+
+  return (a / b);
+}
+
+int main() {
+
+  int x = 10, y = 0;
+  double result = 0;
+
+  try {
+    result = divideIt(x, y);
+    std::cout << result << std::endl;
+  }
+  catch(const std::runtime_error& e) {
+    std::cerr << e.what() << std::endl;
+  }
+
+  return 0;
+}
+
+```
+
+As you can see, I used the catch block that takes as a parameter only a std::runtime_error, therefore, if we had another type of exception, that catch block would have *NOT* handled the other exception. One way to let one catch block handle any exception is to give the catch block en ellipsis as a parameter like so **catch(...){}**. However, this is not very good practice as it is better to handle different exceptions in different catch blocks.
+
 
 
 
