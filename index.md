@@ -739,7 +739,7 @@ So, in th example above, a possible output could be:
 
 ```shell
 
-main: main.cpp:5: double divideIt(int, int): Assertion \'b != 0\' failed.
+main: main.cpp:5: double divideIt(int, int): Assertion 'b != 0' failed.
 
 ```
 
