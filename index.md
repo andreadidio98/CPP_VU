@@ -705,6 +705,44 @@ A very common and useful way of debugging your code is to think about what outpu
 
 ### Assertions (EXTRA)
 
+The \<cassert\> header file contains possibly the most useful macro (function) for debugging. The assert macro allows you to test for post-conditions in your code. In many situations it could be desirable to use an assertion, for example, for the *division by 0* error we could check the parameters of the *divideIt* function by using an assertion as follows:
+
+
+```c++
+
+#include <iostream>
+#include <cassert>
+
+double divideIt(int a, int b) {
+  assert(b != 0);
+  return (a / b);
+}
+
+int main() {
+  int a = 10, b = 0;
+  double result = divideIt(a, b);
+
+  return 0;
+}
+
+```
+
+Basically, if the expression which is passed as a parameter to the assert function evaluates to **false** (or, equivalently, 0), an **assertion failure** is reached, which causes the program to abort. The output is dependent on the library implementation, however, in most cases, the error message which gets printed to the console is usually of the format of:
+
+```
+
+Assertion failed: expression, filename, line number
+
+```
+
+So, in th example above, a possible output could be:
+
+```shell
+
+main: main.cpp:5: double divideIt(int, int): Assertion \'b != 0\' failed.
+
+```
+
 
 
 
