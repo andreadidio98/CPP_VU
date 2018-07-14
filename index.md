@@ -617,7 +617,7 @@ Usually, run time errors are the hardest errors to debug, because in most cases,
 1. The caller of a function.
 2. The callee (i.e., the function itself).
 
-In the first situation, the code becomes hard to maintain because everytime a function is called, we would have to add try-catch blocks, check for return values and use many if statements to act accordingly to the return values. This can be useful however catching exceptions in code is very expensive and hinders performance. As a side note, if you will program in C, you will see that most functions will be of type *int*, because all the return values of system calls have to be checked (think about the main function in C++), and as you should know by now, void functions do not "allow" to return a value.
+In the first situation, the code becomes hard to maintain because everytime a function is called, we would have to add **try-catch blocks**, check for return values and use many if statements to act accordingly to the return values. This can be useful however catching exceptions in code is very expensive and hinders performance. As a side note, if you will program in C, you will see that most functions will be of type *int*, because all the return values of system calls have to be checked (think about the main function in C++), and as you should know by now, void functions do not "allow" to return a value.
 
 Handling errors on the callee's side is less messy, however, it is not always possible to do so. Imagine a function taken from the iostream library, you *cannot* (unless wrapping the function in a function you program yourself) change it. In addition, it is not easy to keep track of where the error is causing a break in the control flow of your program, because you don't know which function call is actually calling the error.
 
@@ -645,6 +645,16 @@ for(int i = 0; i < dynamic_array.size(); i++) {
 The example above will not produce the expected output. The loop will not iterate through the code block because the *dynamic_array.size()* function call will return 0, and the vector will therefore not be filled with values. The code will compile, because there are no errors related to the C++ language. However it is logically invalid and will hence produce unexpected (or no) output.
 
 ## Exceptions
+
+In C++ exception handling is based on three keywords:
+
+1. **throw** - To be used when the problem shows up
+2. **try** - A try block identifies a block of code for which particular exceptions will be activated.
+3. **catch** - A program catches an exception with an exception handler at the place in a program where you want to handle the problem.
+
+In the <stdexcept> header file, the following exceptions are defined:
+
+![<stdexcept> std exceptions](https://www.tutorialspoint.com/cplusplus/images/cpp_exceptions.jpg)
 
 
 
