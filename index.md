@@ -743,12 +743,21 @@ main: main.cpp:5: double divideIt(int, int): Assertion 'b != 0' failed.
 
 ```
 
-This is also a neater way of testing with if statements and outputting through cout. 
+This is also a neater way of testing with if statements and outputting through cout.
 
 
 
 ### GDB (EXTRA)
 
+The most famous command line debugger for C/C++ is the **GNU Debugger** (gdb). Starting gdb is very simple from the command line, once your source code has been compiled, running the executable in gdb is fairly easy:
+
+```shell
+
+gdb ./<exec_file>
+
+```
+
+The gdb debugger can be very tedious and complicated to use, so this is just a simple introduction. If you want to learn more about the gdb debugger and how to use it see [this link](https://www.gnu.org/software/gdb/documentation/).
 
 # <a name="module4"></a>Module 4
 
