@@ -800,11 +800,49 @@ int main() {
 
 ## Vectors
 
-Sometimes, we cannot know in advance the size of the array, therefore we need a way to dynamically allocate the memory so that the array can grow/shrink in size. In C, this would be done by using a pointer (See [Module 7](#module7)) and using the malloc() and realloc() functions. In C++, there is something called a **vector** (*std::vector*), which does just that (and much more). For example, let's say we have a classroom and every day, the teacher writes down the names of the people who are attending the class and those who are absent separately. Clearly, the amount of students either attending or not varies daily, so with vectors: 
+Sometimes, we cannot know in advance the size of the array, therefore we need a way to dynamically allocate the memory so that the array can grow/shrink in size. In C, this would be done by using a pointer (See [Module 7](#module7)) and using the malloc() and realloc() functions. In C++, there is something called a **vector** (*std::vector*), which does just that (and much more). For example, let's say we have a classroom and every day, the teacher writes down the names of the people who are attending the class and those who are absent separately. Clearly, the amount of students either attending or not varies daily, so with vectors:
 
 
 ```c++
 
+#include <iostream>
+#include <vector>
+
+int main() {
+
+	std::string absent_name, attending_name;
+	std::vector<std::string> attending, absent;
+
+	std::cout << "Enter the names of the students attending: \n";
+
+	while(std::cin >> attending_name) {
+
+		if(attending_name == "end") {
+			break;
+		}
+		attending.push_back(attending_name);
+	}
+
+	std::cout << "Enter the names of the students who are absent: \n";
+
+	while(std::cin >> absent_name) {
+
+		if(absent_name == "end") {
+			break;
+		}
+		absent.push_back(absent_name);
+	}
+
+
+	for(const auto& name : attending) {
+		std::cout << "Student: " << name  << " is attending! :)" << std::endl;
+	}
+
+	for(const auto& name : absent) {
+		std::cout << "Student: " << name << " is absent! :(" << std::endl;
+	}
+	return 0;
+}
 
 
 ```
