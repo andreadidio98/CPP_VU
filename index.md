@@ -674,19 +674,22 @@ double divideIt(int a, int b) {
 
 int main() {
 
-  int x = 10, y = 0;
-  double result = 0;
-
   try {
+    int x = 10, y = 0;
+    double result = 0;
     result = divideIt(x, y);
     std::cout << result << std::endl;
+
+    return 0;
   }
   catch(const std::runtime_error& e) {
     std::cerr << e.what() << std::endl;
     return 1;
   }
-
-  return 0;
+  catch(...) {
+    std::cerr << "Unknown exception thrown" << std::endl;
+    return 2;
+  }
 }
 
 ```
@@ -759,7 +762,45 @@ gdb ./<exec_file>
 
 The gdb debugger can be very tedious and complicated to use, so this is just a simple introduction. If you want to learn more about the gdb debugger and how to use it see [this link](https://www.gnu.org/software/gdb/documentation/).
 
+
+
 # <a name="module4"></a>Module 4
+
+## Arrays
+
+Arrays are a a very important data structure in programming as they are a collection of data and hence allow you to keep together in memory values that are somehow related to one another without the need of using a variable for each one of them. We can then access the value stored in memory at one particular index by using the name of of the array and accessing the index through square brackets.
+
+**NOTE:** Arrays start at index *0*, therefore the first element in the array is the 0th element. For example:
+
+```c++
+
+#include <iostream>
+#include <vector>
+#include <array>
+
+
+
+int main() {
+    std::string names[5] = {"John", "Ted", "Leonard", "Bob", "Carl"};
+
+    std::array<std::string, 3> new_names = {"Simon" , "Elisabeth", "Jamie"};//c++11
+
+    for(const std::string& name : names) {
+        std::cout << name << std::endl;
+    }
+
+    for(const auto& name : new_names) {//c++11
+        std::cout << name << std::endl;
+    }
+
+    return 0;
+}
+
+```
+
+## Vectors
+
+Sometimes, we cannot know in advance the size of the array, therefore we need a way to dynamically allocate the memory so that the array can grow/shrink in size. In C, this would be done by using a pointer (See [Module 7](#module7)) and using the malloc() and realloc() functions. In C++, there is something called a **vector** (*std::vector*), which does just that (and much more).
 
 # <a name="module5"></a>Module 5
 
