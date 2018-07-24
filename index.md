@@ -800,7 +800,14 @@ int main() {
 
 ## Vectors
 
-Sometimes, we cannot know in advance the size of the array, therefore we need a way to dynamically allocate the memory so that the array can grow/shrink in size. In C, this would be done by using a pointer (See [Module 7](#module7)) and using the malloc() and realloc() functions. In C++, there is something called a **vector** (*std::vector*), which does just that (and much more).
+Sometimes, we cannot know in advance the size of the array, therefore we need a way to dynamically allocate the memory so that the array can grow/shrink in size. In C, this would be done by using a pointer (See [Module 7](#module7)) and using the malloc() and realloc() functions. In C++, there is something called a **vector** (*std::vector*), which does just that (and much more). For example, let's say we have a classroom and every day, the teacher writes down the names of the people who are attending the class and those who are absent separately. Clearly, the amount of students either attending or not varies daily, so with vectors: 
+
+
+```c++
+
+
+
+```
 
 # <a name="module5"></a>Module 5
 
