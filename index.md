@@ -750,20 +750,6 @@ This is also a neater way of testing with if statements and outputting through c
 
 
 
-### GDB (EXTRA)
-
-The most famous command line debugger for C/C++ is the **GNU Debugger** (gdb). Starting gdb is very simple from the command line, once your source code has been compiled, running the executable in gdb is fairly easy:
-
-```shell
-
-gdb ./<exec_file>
-
-```
-
-The gdb debugger can be very tedious and complicated to use, so this is just a simple introduction. If you want to learn more about the gdb debugger and how to use it see [this link](https://www.gnu.org/software/gdb/documentation/).
-
-
-
 # <a name="module4"></a>Module 4
 
 ## Arrays
@@ -800,7 +786,7 @@ int main() {
 
 ## Vectors
 
-Sometimes, we cannot know in advance the size of the array, therefore we need a way to dynamically allocate the memory so that the array can grow/shrink in size. In C, this would be done by using a pointer (See [Module 7](#module7)) and using the malloc() and realloc() functions. In C++, there is something called a **vector** (*std::vector*), which does just that (and much more). For example, let's say we have a classroom and every day, the teacher writes down the names of the people who are attending the class and those who are absent separately. Clearly, the amount of students either attending or not varies daily, so with vectors:
+Sometimes, we cannot know in advance the size of the array, therefore we need a way to dynamically allocate the memory so that the array can grow/shrink in size. In C, this would be done by using a pointer (See [Module 7](#module7)) and using the malloc() and realloc() functions. In C++, there is something called a **vector** (*std::vector*), which does just that (and much more). Another big improvement on vectors over arrays is that arrays (as in C but unlike Java) do not have bounds checking, so you can access an index which is not *"reserved"* however, this causes **undefined behaviour**. For example, let's say we have a classroom and every day, the teacher writes down the names of the people who are attending the class and those who are absent separately. Clearly, the amount of students either attending or not varies daily, so with vectors:
 
 
 ```c++
@@ -846,6 +832,9 @@ int main() {
 
 
 ```
+
+## Parameter Passing
+
 
 # <a name="module5"></a>Module 5
 
