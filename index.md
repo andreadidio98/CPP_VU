@@ -843,7 +843,15 @@ There are three main ways to pass parameters to functions:
 
 ![value vs reference](http://www.mathwarehouse.com/programming/images/pass-by-reference-vs-pass-by-value-animation.gif)
 
-Passing an argument by *value* means that the variable will be copied and another variable of the same type containing the same value will be created and its lifetime will depend on  the function's *scope*. Passing by value is usually not a great idea when we have to pass to the function "big" variables such as arrays or vectors because copying everything can be expensive.
+Passing an argument by *value* means that the variable will be copied and another variable of the same type containing the same value will be created and its lifetime will depend on  the function's *scope*. Passing by value is usually not a great idea when we have to pass to the function "big" variables such as arrays or vectors because copying everything can be expensive. So, essentially, when passing a parameter by value, the caller and the callee of the function will have **two independent variables!** If the callee modifies the value, the changes will only live within the function's scope but the changes will **NOT** be seen by the caller.
+
+Passing an argument by **reference** means that you are passing to the function the address of a variable to use. So, both the callee and the caller of the function **use the same variable**. This means that if the callee modifies the value of this variable, the changes **WILL BE** seen by the caller.
+
+Passing an argument by **const-reference** is a way of passing an argument we don't want to modify within the function (think a print() function), however we don't want to copy data. This is Therefore more efficient than passing by value, and also safer, because as a *const* we know the value cannot be modified.
+
+## Recursion
+
+
 
 # <a name="module5"></a>Module 5
 
