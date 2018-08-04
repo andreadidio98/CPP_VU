@@ -833,6 +833,8 @@ int main() {
 ```
 ```
 
+# <a name="module5"></a>Module 5
+
 ## Parameter Passing
 
 There are three main ways to pass parameters to functions:
@@ -850,10 +852,6 @@ Passing an argument by **reference** means that you are passing to the function 
 Passing an argument by **const-reference** is a way of passing an argument we don't want to modify within the function (think a print() function), however we don't want to copy data. This is Therefore more efficient than passing by value, and also safer, because as a *const* we know the value cannot be modified.
 
 ## Recursion
-
-
-
-# <a name="module5"></a>Module 5
 
 # <a name="module6"></a>Module 6
 
