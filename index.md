@@ -883,10 +883,12 @@ int main() {
 
 ```
 
-
-
-
+To keep it simple, what a recursion function essentially does, is calling a function, in order to understand this easily, think of a the recursive function calling other functions, the only difference being is that the function has the same name and same functionality.
 
 # <a name="module6"></a>Module 6
+
+## Classes
+
+
 
 # <a name="module7"></a>Module 7
