@@ -831,7 +831,6 @@ int main() {
 }
 
 ```
-```
 
 # <a name="module5"></a>Module 5
 
