@@ -841,7 +841,7 @@ There are three main ways to pass parameters to functions:
 2. By **reference**
 3. By **const-reference**
 
-![value vs reference](https://www.google.it/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwj1puOandPcAhUhxoUKHew8BoMQjRx6BAgBEAU&url=http%3A%2F%2Fwww.mathwarehouse.com%2Fprogramming%2Fpassing-by-value-vs-by-reference-visual-explanation.php&psig=AOvVaw0f7uVqOrm4mBHXaLzjk3OS&ust=1533466256316443)
+![value vs reference](http://www.mathwarehouse.com/programming/images/pass-by-reference-vs-pass-by-value-animation.gif)
 
 Passing an argument by *value* means that the variable will be copied and another variable of the same type containing the same value will be created and its lifetime will depend on  the function's *scope*. Passing by value is usually not a great idea when we have to pass to the function "big" variables such as arrays or vectors because copying everything can be expensive.
 
