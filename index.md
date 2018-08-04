@@ -853,6 +853,40 @@ Passing an argument by **const-reference** is a way of passing an argument we do
 
 ## Recursion
 
+A recursive function is a **"function that calls itself"**. Recursion is very important when dealing with algorithms (especially the *divide and conquer* ones). A recursive function **ALWAYS** has a **base case** (termination condition), this is because if we did not have a condition for the function to "stop calling itself", we would have an infinite loop and run into a **stack overflow**. An example of a recursive function is a function that counts up to a certain number:
+
+```c++
+
+#include <iostream>
+
+void countUp(int n, int limit) {
+
+    std::cout << "Counting up to "<< limit << " -- Currently at: " << n << std::endl;
+    n++;
+
+    if(n <= limit) {
+        countUp(n, limit);
+    }
+}
+
+
+int main() {
+
+  int input_value = 0, base_value = 0;
+  std::cout << "Enter a number to count up to: \n";
+  std::cin >> input_value;
+
+  countUp(base_value, input_value);
+
+  return 0;
+}
+
+```
+
+
+
+
+
 # <a name="module6"></a>Module 6
 
 # <a name="module7"></a>Module 7
