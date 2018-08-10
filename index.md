@@ -882,9 +882,23 @@ int main() {
 
 ```
 
-To keep it simple, what a recursion function essentially does, is calling a function, in order to understand this easily, think of a the recursive function calling other functions, the only difference being is that the function has the same name and same functionality.
+To keep it simple, what a recursive function essentially does, is calling a function, in order to understand this easily, think of a the recursive function calling other functions, the only difference being is that the function has the same name and same functionality.
 
 # <a name="module6"></a>Module 6
+
+## Namespaces
+
+There are five kinds of scopes:
+
+1. **Global** scope, e.g., global variables
+2. **Local** scope, e.g., confining a variable between two curly brackets
+3. **Class** scope, e.g., class members
+4. **Function** scope, e.g., variables declared within a function
+5. **Statement** scope, e.g., *int i* in a for loop
+
+Sometimes, we want to "bend" these scopes, in such a way that we can address functions (or variables) with the same name correctly. Imagine having a classrooom of 200 students; the probability that there is more than one student with the sae first name is pretty high. A teacher could start addressing a one of those students with their full name or, very unlikely, their address if two students have the same full name. In C++, namespaces can be used exactly in these occasions. As you have seen by now, in your C++ programs, you will include different libraries (through the #include preprocessor directive, for example *#include <iostream>*), you have defined a function called *log()* that prints to *STDOUT*, an std::string, if a library you have imported also has a function called *log()*, when you call the function, how will the compiler know which function you are calling? This is where namespaces come into play. Using namespace, you can define the context in which names are defined. In essence, a namespace defines a scope.
+
+
 
 ## Classes
 
