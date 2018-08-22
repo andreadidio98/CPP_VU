@@ -896,11 +896,60 @@ There are five kinds of scopes:
 4. **Function** scope, e.g., variables declared within a function
 5. **Statement** scope, e.g., *int i* in a for loop
 
-Sometimes, we want to "bend" these scopes, in such a way that we can address functions (or variables) with the same name correctly. Imagine having a classrooom of 200 students; the probability that there is more than one student with the sae first name is pretty high. A teacher could start addressing a one of those students with their full name or, very unlikely, their address if two students have the same full name. In C++, namespaces can be used exactly in these occasions. As you have seen by now, in your C++ programs, you will include different libraries (through the #include preprocessor directive, for example *#include <iostream>*), you have defined a function called *log()* that prints to *STDOUT*, an std::string, if a library you have imported also has a function called *log()*, when you call the function, how will the compiler know which function you are calling? This is where namespaces come into play. Using namespace, you can define the context in which names are defined. In essence, a namespace defines a scope.
+Sometimes, we want to "bend" these scopes, in such a way that we can address functions (or variables) with the same name correctly. Imagine having a classrooom of 200 students; the probability that there is more than one student with the sae first name is pretty high. A teacher could start addressing a one of those students with their full name or, very unlikely, their address if two students have the same full name. In C++, namespaces can be used exactly in these occasions. As you have seen by now, in your C++ programs, you will include different libraries (through the #include preprocessor directive, for example *#include <iostream>*), you have defined a function called *log()* that prints to *STDOUT*, an std::string, if a library you have imported also has a function called *log()*, when you call the function, how will the compiler know which function you are calling? This is where namespaces come into play. Using namespace, you can define the context in which names are defined. In essence, a namespace defines a scope. The most obvious example is the **std** namespace which we use for example, with strings (**std::string**) or with I/O streams (**std::cout**, **std::cin**, **std::cerr**).
+
+
+```c++
+
+#include <iostream>
+
+namespace library {
+  void log(const std::string& input_string) {
+    std::cout << "Logging -- Namespace Library: " << input_string << std::endl;
+  }
+}
+
+namespace book {
+  void log(const std::string& input_string) {
+    std::cout << "Logging -- Namespace Book: " << input_string << std::endl;
+  }
+}
+
+int main() {
+  std::string library_array[3] = {"NYC Public Library", "Washington Public Library", "Oxford Library"};
+  std::string book_array[3] = {"Pride & Prejudice", "Harry Potter", "Streetcar Named Desire"};
+
+  for(const auto& lib : library_array) {
+    library::log(lib);
+  }
+
+  for(const auto& book : book_array) {
+    book::log(book);
+  }
+
+  return 0;
+}
+
+```
+
+The example above yields the following output:
+
+```shell
+
+Logging -- Namespace Library: NYC Public Library
+Logging -- Namespace Library: Washington Public Library
+Logging -- Namespace Library: Oxford Library
+Logging -- Namespace Book: Pride & Prejudice
+Logging -- Namespace Book: Harry Potter
+Logging -- Namespace Book: Streetcar Named Desire
+
+```
 
 
 
 ## Classes
+
+Classes are one of the main topics of **Object-Oriented Programming** (OOP). They allow us to create our own data types, known as **Abstract Data Types** (ADTs) when the primitive types are not enough (int, char, bool, etc...). 
 
 
 
