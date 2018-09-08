@@ -7,9 +7,6 @@ layout: default
 <img src="https://raw.githubusercontent.com/isocpp/logos/master/cpp_logo.png" alt="cpp_logo" width="120" height="130">
 </p>
 
-
-The Sections of this page marked as *(EXTRA)* are **NOT** essential for passing the course, however they do give a greater insight on the C++ language, and might help you in future courses. Students who are not interested in going the "extra mile" can safely ignore these sections.
-
 * * *
 
 # Contents
@@ -949,7 +946,7 @@ Logging -- Namespace Book: Streetcar Named Desire
 
 ## Classes
 
-Classes are one of the main topics of **Object-Oriented Programming** (OOP). They allow us to create our own data types, known as **Abstract Data Types** (ADTs) when the primitive types are not enough (int, char, bool, etc...). 
+Classes are one of the main topics of **Object-Oriented Programming** (OOP). They allow us to create our own data types, known as **Abstract Data Types** (ADTs) when the primitive types are not enough (int, char, bool, etc...).
 
 
 
